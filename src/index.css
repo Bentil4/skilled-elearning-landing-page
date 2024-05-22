@@ -28,6 +28,13 @@ section {
   color: #fff;
   border-radius: 20px;
   padding: 0.8em 1.2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-bar button:hover {
+  background-color: #83869a;
 }
 
 .max-skill {
@@ -52,10 +59,15 @@ section {
 
 .max-skill-left button {
   background-image: linear-gradient(#f02aa6, #ff6f48);
-  outline: none;
   border: none;
+  color: #fff;
   border-radius: 20px;
   padding: 0.8em 1.2em;
+  cursor: pointer;
+}
+
+.max-skill-left button:hover {
+  background-image: linear-gradient(#ffa7c3, rgba(255, 111, 72, 0.5));
 }
 
 .max-skill-right {
@@ -69,4 +81,100 @@ section {
   margin-top: -8%;
   margin-right: -20%;
   /* background-color: #f02aa6; */
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: #f02aa6; */
+  /* padding: 2em; */
+}
+
+.main-cont {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 1em; */
+  width: 80%;
+  height: 300px;
+}
+
+.cards {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(#f02aa6, #ff6f48);
+  border-radius: 0.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  /* padding: 2rem; */
+}
+
+.secondCards {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  /* color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem;
+  margin: 3rem;
+}
+
+.secondCards .start {
+  padding: 0.5rem;
+  color: #f74780;
+  cursor: pointer;
+}
+
+.secondCards .start:hover {
+  color: #ffa7c3;
+}
+
+.all-cards {
+  padding: 2em;
+  /* margin: 5em; */
+}
+
+/* Footer */
+footer {
+  background: #13183f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+footer > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer button {
+  background-image: linear-gradient(#f02aa6, #ff6f48);
+  border: none;
+  border-radius: 20px;
+  padding: 0.8em 1.2em;
+  color: #fff;
 }
