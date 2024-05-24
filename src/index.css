@@ -16,20 +16,30 @@ section {
   overflow: hidden;
 }
 
+main p {
+  text-align: justify;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em;
+  width: 80%;
 }
 
-.nav-bar button {
+.btn-1 {
   background-color: #13183f;
   color: #fff;
   border-radius: 20px;
   padding: 0.8em 1.2em;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -37,23 +47,30 @@ section {
   background-color: #83869a;
 }
 
+span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .max-skill {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin-bottom: 8rem;
 }
 
 .max-skill-left {
   /* display: flex; */
   /* flex-direction: column; */
   padding: 2em;
-  width: 40%;
+  width: 50%;
   margin-bottom: 1rem;
 }
 
 .max-skill-left h3 {
-  font-size: 56px;
+  font-size: 50px;
   font-family: Plus Jakarta Sans;
 }
 
@@ -73,62 +90,68 @@ section {
 .max-skill-right {
   width: 60%;
   background-image: url(./asset/image-hero-desktop@2x.png);
+  /* background-color: red; */
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  margin-top: -8%;
-  margin-right: -20%;
-  /* background-color: #f02aa6; */
+  margin-top: -11%;
+  margin-right: -25%;
 }
 
 /* Main */
 
 main {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   height: 100vh;
   /* background: #f02aa6; */
   /* padding: 2em; */
 }
 
 .main-cont {
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 1em; */
+  /* height: 80vh; */
   width: 80%;
-  height: 300px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10em;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .cards {
-  width: 50%;
-  height: 100%;
+  /* width: 50%;
+  height: 100%; */
   background-image: linear-gradient(#f02aa6, #ff6f48);
   border-radius: 0.5rem;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 32px;
+  padding: 2rem;
+}
+
+.card-row {
+  display: flex;
+  margin: 2rem;
   /* padding: 2rem; */
+  /* flex-direction: column; */
+}
+
+.top,
+.down {
+  width: 33.3%;
+  margin: 2rem;
 }
 
 .secondCards {
-  width: 50%;
-  height: 100%;
   background-color: #fff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
@@ -138,7 +161,11 @@ main {
   justify-content: space-around;
   align-items: flex-start;
   padding: 2rem;
-  margin: 3rem;
+  /* margin: 3rem; */
+}
+
+.secondCards p {
+  font-size: 1.2rem;
 }
 
 .secondCards .start {
@@ -152,8 +179,17 @@ main {
 }
 
 .all-cards {
-  padding: 2em;
-  /* margin: 5em; */
+  /* padding: 2em; */
+  width: 33.3%;
+  height: 300px;
+  flex: 1 1 30%;
+  /* height: 100%; */
+  margin: 2rem 5px;
+}
+
+.secondCards img {
+  z-index: 1;
+  margin-top: -5rem;
 }
 
 /* Footer */
@@ -177,4 +213,170 @@ footer button {
   border-radius: 20px;
   padding: 0.8em 1.2em;
   color: #fff;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-image: linear-gradient(#ffa7c3, rgba(255, 111, 72, 0.5));
+}
+
+/* Responsiveness */
+/* Tablet View */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-bar {
+    width: 90%;
+  }
+
+  span {
+    margin-bottom: 5rem;
+    height: 80vh;
+    border: red solid 1px;
+  }
+  .max-skill {
+    width: 90%;
+  }
+
+  .max-skill-left {
+    min-width: 50%;
+    padding: 1em;
+    margin-bottom: 1rem;
+  }
+
+  .max-skill-left h3 {
+    font-size: 35px;
+  }
+
+  .max-skill-left p {
+    font-size: 0.8em;
+  }
+
+  .max-skill-right {
+    width: 80%;
+    background-image: url(./asset/image-hero-desktop@2x.png);
+    background-size: contain;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin-top: -21%;
+    margin-right: -35%;
+  }
+
+  /*Main  */
+
+  main {
+    height: 180vh;
+    /* margin-top: 5rem; */
+  }
+
+  .all-cards {
+    height: 300px;
+    flex: 1 1 40%;
+    margin: 2rem 5px;
+  }
+
+  .secondCards p {
+    font-size: 0.8em;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile View */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  nav {
+    width: 100%;
+  }
+  .nav-bar {
+    width: 100%;
+  }
+
+  span {
+    display: flex;
+
+    /* flex-direction: column; */
+  }
+
+  .max-skill {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .max-skill-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 95%;
+    padding: 0;
+    border: red solid 1px;
+  }
+
+  .max-skill-left h3 {
+    font-size: 2.5rem;
+  }
+
+  /* .max-skill-right {
+    width: 60%;
+    background-image: url(./asset/image-hero-desktop@2x.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  } */
+
+  .max-skill-right {
+    width: 95%;
+    height: 50vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    background-image: url(./asset/image-hero-mobile.png);
+    background-size: contain;
+    border: rebeccapurple 2px solid;
+    z-index: 1;
+    margin-top: 0%;
+    margin-right: 0%;
+  }
+
+  /* Main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 330vh;
+  }
+
+  .all-cards {
+    /* padding: 2em; */
+    width: 90%;
+    height: 300px;
+    flex: 1 1 30%;
+    /* height: 100%; */
+    margin: 2rem 5px;
+  }
+
+  .cards {
+    /* width: 50%;
+  height: 100%; */
+    background-image: linear-gradient(#f02aa6, #ff6f48);
+    border-radius: 0.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 2rem;
+    width: 90%;
+    height: 1%;
+  }
 }
