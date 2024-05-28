@@ -65,8 +65,6 @@ span {
 }
 
 .max-skill-left {
-  /* display: flex; */
-  /* flex-direction: column; */
   padding: 2em;
   width: 50%;
   margin-bottom: 1rem;
@@ -100,8 +98,8 @@ button {
 .max-skill-right {
   width: 60%;
   background-image: url(./asset/image-hero-desktop@2x.png);
-  height: 100vh;
-  background-size: cover;
+  height: 80vh;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
@@ -117,6 +115,7 @@ main {
   align-items: center;
   max-width: 100%;
   height: 100vh;
+  margin-bottom: 10em;
 }
 
 .main-cont {
@@ -124,7 +123,6 @@ main {
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10em;
   justify-content: space-between;
 }
 
@@ -185,11 +183,9 @@ main {
 }
 
 .all-cards {
-  /* padding: 2em; */
   width: 33.3%;
   height: 300px;
   flex: 1 1 30%;
-  /* height: 100%; */
   margin: 2rem 5px;
 }
 
@@ -242,7 +238,7 @@ footer button:hover {
 
   span {
     margin-bottom: 5rem;
-    /* height: 80vh; */
+    /* height: 0; */
     border: red solid 1px;
   }
   .max-skill {
@@ -264,22 +260,20 @@ footer button:hover {
   }
 
   .max-skill-right {
-    width: 80%;
-    background-image: url(./asset/image-hero-tablet.png);
+    width: 100%;
+    background-image: url(./asset/image-hero-tablet@2x.png);
     background-size: contain;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 80vh;
     z-index: 1;
-    margin-top: -21%;
-    margin-right: -35%;
+    margin-top: -17em;
+    margin-right: -15em;
   }
 
   /*Main  */
 
   main {
-    height: 180vh;
-    /* margin-top: 5rem; */
+    height: 100vh;
+    margin-top: -15rem;
   }
 
   .all-cards {
@@ -300,7 +294,7 @@ footer button:hover {
 }
 
 /* Mobile View */
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
   nav {
     width: 100%;
   }
@@ -310,7 +304,6 @@ footer button:hover {
 
   span {
     display: flex;
-    border: solid red 1px;
     /* height: 100vh; */
     /* flex-direction: column; */
   }
@@ -340,8 +333,6 @@ footer button:hover {
   .max-skill-right {
     width: 95%;
     height: 50vh;
-    /* display: flex; */
-    /* justify-content: center; */
     background-image: url(./asset/image-hero-mobile.png);
     background-size: contain;
     z-index: 1;
@@ -356,7 +347,9 @@ footer button:hover {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    height: 330vh;
+    height: 280vh;
+    margin-bottom: 2em;
+    margin-top: 0;
   }
 
   .main-cont {
@@ -383,5 +376,102 @@ footer button:hover {
     padding: 2rem;
     width: 90%;
     height: 1%;
+  }
+}
+
+/* Desktop View */
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  nav {
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    width: 80%;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .max-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 8rem;
+  }
+
+  .max-skill-left {
+    padding: 2em;
+    /* width: 40%; */
+    margin-bottom: 1rem;
+  }
+
+  .max-skill-left h3,
+  p,
+  button {
+    margin: 1rem;
+  }
+
+  .max-skill-left h3 {
+    font-size: 50px;
+    color: #13183f;
+    font-family: Plus Jakarta Sans;
+  }
+
+  .max-skill-left button {
+    background-image: linear-gradient(#f02aa6, #ff6f48);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+  }
+
+  .max-skill-left button:hover {
+    background-image: linear-gradient(#ffa7c3, rgba(255, 111, 72, 0.5));
+  }
+
+  .max-skill-right {
+    width: 100%;
+    background-image: url(./asset/image-hero-desktop@2x.png);
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    margin-top: -12em;
+    margin-right: -30em;
+  }
+
+  /* Main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6%;
+    margin-bottom: 5%;
+  }
+
+  .main-cont {
+    margin-bottom: 0;
   }
 }
