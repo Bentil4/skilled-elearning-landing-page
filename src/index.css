@@ -27,6 +27,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .nav-bar {
@@ -152,7 +153,7 @@ main {
 
 .secondCards {
   background-color: #fff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
   /* color: #fff; */
   display: flex;
@@ -161,6 +162,11 @@ main {
   align-items: flex-start;
   padding: 2rem;
   /* margin: 3rem; */
+}
+
+.mgs,
+.start {
+  margin: 0;
 }
 
 .secondCards h4 {
@@ -239,7 +245,6 @@ footer button:hover {
   span {
     margin-bottom: 5rem;
     /* height: 0; */
-    border: red solid 1px;
   }
   .max-skill {
     width: 90%;
@@ -294,7 +299,7 @@ footer button:hover {
 }
 
 /* Mobile View */
-@media screen and (min-width: 360px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   nav {
     width: 100%;
   }
@@ -410,6 +415,7 @@ footer button:hover {
     display: flex;
     justify-content: center;
     width: 100%;
+    /* height: 80vh; */
   }
 
   .max-skill {
@@ -457,7 +463,7 @@ footer button:hover {
     background-position: center;
     background-size: contain;
     z-index: 1;
-    margin-top: -12em;
+    margin-top: -15em;
     margin-right: -30em;
   }
 
