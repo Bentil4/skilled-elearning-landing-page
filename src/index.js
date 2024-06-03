@@ -136,7 +136,7 @@ const SecondCard = (props) => {
   return (
     <article className="secondCards all-cards">
       <img src={props.img} alt={props.title} />
-      <h4>{props.title}</h4>
+      <p>{props.title}</p>
       <p className="mgs">{props.message}</p>
       <p className="start">{props.getStarted}</p>
     </article>

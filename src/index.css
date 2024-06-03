@@ -56,7 +56,7 @@ span {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
 }
 
 .max-skill {
@@ -98,15 +98,14 @@ button {
 }
 
 .max-skill-right {
-  /* width: 746px;
-  height: 638px; */
-  width: 80%;
-  height: 70vh;
+  width: 246px;
+  height: 138px;
+  /* width: 80%;
+  height: 70vh; */
   background-image: url(./asset/image-hero-desktop@2x.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  z-index: 1;
   position: absolute;
   top: -24%;
   left: 60%;
@@ -126,7 +125,7 @@ main {
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .cards {
@@ -157,7 +156,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: baseline;
   padding: 2rem;
 }
 
@@ -234,24 +233,24 @@ footer button:hover {
 /* Responsiveness */
 /* Tablet View */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 600px) and (max-width: 899px) {
   nav {
     width: 100%;
     height: 10vh;
   }
 
   .nav-bar {
-    width: 90%;
+    width: 80%;
   }
 
   span {
     /* margin-bottom: 5rem; */
     height: 70vh;
     width: 100%;
-    border: gold 1px solid;
+    /* border: gold 1px solid; */
   }
   .max-skill {
-    width: 90%;
+    width: 80%;
     position: relative;
   }
 
@@ -262,7 +261,7 @@ footer button:hover {
   }
 
   .max-skill-left h3 {
-    font-size: 35px;
+    font-size: 2em;
   }
 
   .max-skill-left p {
@@ -271,17 +270,17 @@ footer button:hover {
 
   .max-skill-right {
     position: absolute;
-    /* width: 100%;
-    height: 90%; */
-    width: 846px;
-    height: 738px;
+    width: 100%;
+    height: 120%;
+    /* width: 546px;
+    height: 438px; */
     background-image: url(./asset/image-hero-tablet.png);
     background-size: contain;
     /* height: 80vh; */
     z-index: 1;
-    left: 35%;
-    top: -30%;
-    border: solid red 1px;
+    left: 40%;
+    top: -28%;
+    /* border: solid red 1px; */
   }
 
   /*Main  */
@@ -297,12 +296,12 @@ footer button:hover {
   }
 
   .main-cont {
-    width: 90%;
+    width: 80%;
   }
 
   .all-cards {
-    height: 300px;
-    flex: 1 1 40%;
+    /* max-height: 1; */
+    flex: 1 1 33%;
     margin: 2rem 5px;
     padding: 2em;
   }
@@ -318,16 +317,136 @@ footer button:hover {
   }
 }
 
-/* Mobile View */
-@media screen and (max-width: 767px) {
+/* Tablets (landscape) and small laptops */
+@media (min-width: 900px) and (max-width: 1199px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
   nav {
     width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    width: 80%;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    /* border: solid red 1px; */
+  }
+
+  .max-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: relative;
+  }
+
+  .max-skill-left {
+    padding: 2em;
+    width: 50%;
+  }
+
+  .max-skill-left h3,
+  p,
+  button {
+    margin: 1rem;
+  }
+
+  .max-skill-left h3 {
+    font-size: 2.3em;
+    color: #13183f;
+    font-family: Plus Jakarta Sans;
+  }
+
+  .max-skill-left button {
+    background-image: linear-gradient(#f02aa6, #ff6f48);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+  }
+
+  .max-skill-left button:hover {
+    background-image: linear-gradient(#ffa7c3, rgba(255, 111, 72, 0.5));
+  }
+
+  .max-skill-right {
+    /* width: 846px;
+    height: 738px; */
+    width: 100%;
+    height: 140%;
+    background-image: url(./asset/image-hero-desktop@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: 1;
+    position: absolute;
+    top: -40%;
+    left: 45%;
+    /* border: #f02aa6 1px solid; */
+  }
+
+  /* Main */
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    /* margin-top: -6%;
+    margin-bottom: 5%; */
+  }
+
+  .main-cont {
+    margin-bottom: 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .all-cards {
+    width: 50.3%;
+    height: 350px;
+    /* flex: 1 1 30%; */
+    /* margin: 2rem 0.5em; */
+  }
+  .cards {
+    padding: 3rem 0.5rem 0.5rem;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 599px) {
+  nav {
+    width: 100%;
+    height: 10vh;
   }
   .nav-bar {
     width: 100%;
   }
 
   span {
+    /* margin-top: 1em; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +459,7 @@ footer button:hover {
     align-items: center;
     width: 100%;
     margin-bottom: 0;
-    border: red solid 1px;
+    /* border: red solid 1px; */
     position: absolute;
   }
 
@@ -365,7 +484,6 @@ footer button:hover {
     height: 50vh;
     background-image: url(./asset/image-hero-mobile.png);
     background-size: contain;
-    z-index: 1;
     top: 0;
     left: 0;
     position: relative;
@@ -409,9 +527,9 @@ footer button:hover {
   }
 }
 
-/* Desktop View */
+/* Laptops and desktops */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section {
     display: flex;
     flex-direction: column;
@@ -440,8 +558,8 @@ footer button:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 90vh;
-    border: solid red 1px;
+    height: 70vh;
+    /* border: solid red 1px; */
   }
 
   .max-skill {
@@ -483,10 +601,10 @@ footer button:hover {
   }
 
   .max-skill-right {
-    width: 846px;
-    height: 738px;
-    /* width: 80%;
-    height: 70vh; */
+    /* width: 846px;
+    height: 738px; */
+    width: 100%;
+    height: 140%;
     background-image: url(./asset/image-hero-desktop@2x.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -494,8 +612,8 @@ footer button:hover {
     z-index: 1;
     position: absolute;
     top: -35%;
-    left: 55%;
-    border: #f02aa6 1px solid;
+    left: 65%;
+    /* border: #f02aa6 1px solid; */
   }
 
   /* Main */
@@ -511,7 +629,7 @@ footer button:hover {
 
   .main-cont {
     margin-bottom: 0;
-    max-width: 1200px;
+    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
