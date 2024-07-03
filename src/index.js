@@ -29,7 +29,8 @@ function LandingPage() {
             </p>
             <button className="">Get Started</button>
           </div>
-          <div className="max-skill-right"></div>
+          <div className="max-skill-right">
+          </div>
         </div>
       </span>
 
